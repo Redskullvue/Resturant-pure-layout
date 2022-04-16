@@ -1,0 +1,32 @@
+.story{
+    grid-column: 1/-1;
+    margin : 5px;
+}
+.story-images {
+    display : grid;
+    grid-gap : 30px;
+    padding :20px;
+    grid-template-rows: repeat(1, 300px);
+    grid-template-columns: repeat(auto-fit , minmax(220px , 1fr));
+}
+.image{
+    width : 99%;
+    height : 250px;
+    border-radius: 10px;
+    border : 3px solid orange;
+    transition : all 1s;
+}
+.image:hover{
+    transform : scale(1.1)
+}
+
+@media screen and (max-width : 1020px) {
+    .image-4{
+        grid-column: 2/3;
+    }
+}
+@media screen and (max-width : 480px) {
+    .image-4{
+        grid-column: auto;
+    }
+}

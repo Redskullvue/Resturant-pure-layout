@@ -1,0 +1,36 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    display : grid;
+    /* 5 rows Andaze bozorgtarin element to safhe va avalin element be andaze 80vh   */
+    grid-template-rows: 80vh repeat(5, max-content);
+    /* 6 column 1fraction i k kole arz ro ham por konan */
+    grid-template-columns: repeat(6,1fr);
+}
+.section-header {
+    text-align: center;
+    color : orange;
+    font-size : 27px;
+    padding : 25px;
+}
+.section-header::before , .section-header::after{
+    background-color: black;
+    content:"";
+    display :inline-block;
+    height : 2px;
+    position : relative;
+    vertical-align: middle;
+    width : 5%;
+}
+.section-header::after{
+    left : 0.5rem;
+}
+.section-header::before{
+    right : 0.5rem;
+}
